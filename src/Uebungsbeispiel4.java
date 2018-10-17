@@ -16,7 +16,7 @@ public class Uebungsbeispiel4 {
 		int enteredValue = 0;
 		int summe = 0;
 		int min = 2147483647;
-		int max = -2147483647;
+		int max = -2147483648;
 		double mean = 0;
 		double meanReciprocal = 0;
 		double meanNegative = 0;
