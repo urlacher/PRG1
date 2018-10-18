@@ -27,7 +27,15 @@ public class Uebungsbeispiel4 {
 		Scanner sc = new Scanner(System.in);
 
 		while (true) {
-			
+			System.out.print("Amount: ");
+			if (sc.hasNextInt()) {
+				amount = sc.nextInt();
+			} else
+				sc.next();
+			if (amount > 0)
+				break;
+			// Go into while
+		}
 		int count = 1;
 		while (count <= amount) {
 			System.out.print("#" + count + ": ");
@@ -50,7 +58,7 @@ public class Uebungsbeispiel4 {
 		
 	
 
-		mean = 1.0 * summe / amount; 
+		mean = 1.0 * summe / amount; // Prof Fragen Warum wenn ich summe * 1.0 rechne richtiges ergebnis?
 		meanReciprocal = 1 / mean;
 		meanNegative = mean * -1;
 		delta = max - min;
