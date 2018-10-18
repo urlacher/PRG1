@@ -61,7 +61,7 @@ public class Uebungsbeispiel5 {
 			if (amount > 0)
 				break;
 		}
-
+		sc.close();
 		return amount;
 
 	}
