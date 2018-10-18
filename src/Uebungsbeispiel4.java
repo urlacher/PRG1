@@ -50,7 +50,7 @@ public class Uebungsbeispiel4 {
 		
 	
 
-		mean = 1.0 * summe / amount; // Prof Fragen Warum wenn ich summe * 1.0 rechne richtiges ergebnis?
+		mean = 1.0 * summe / amount; 
 		meanReciprocal = 1 / mean;
 		meanNegative = mean * -1;
 		delta = max - min;
