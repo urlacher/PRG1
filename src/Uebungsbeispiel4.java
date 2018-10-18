@@ -27,15 +27,7 @@ public class Uebungsbeispiel4 {
 		Scanner sc = new Scanner(System.in);
 
 		while (true) {
-			System.out.print("Amount: ");
-			if (sc.hasNextInt()) {
-				amount = sc.nextInt();
-			} else
-				sc.next();
-			if (amount > 0)
-				break;
-			// Go into while
-		}
+			
 		int count = 1;
 		while (count <= amount) {
 			System.out.print("#" + count + ": ");
