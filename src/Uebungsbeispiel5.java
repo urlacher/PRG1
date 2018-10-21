@@ -37,7 +37,11 @@ public class Uebungsbeispiel5 {
 				if (countFirst == 0) {
 					++countFirst;
 					System.out.print(min);
+				} else if (countFirst % 10 == 0) {
+					++countFirst;
+					System.out.print(",\n \t\t " + min);
 				} else {
+					++countFirst;
 					System.out.print(", " + min);
 				}
 			}
@@ -61,7 +65,7 @@ public class Uebungsbeispiel5 {
 			if (amount > 0)
 				break;
 		}
-		sc.close();
+//		sc.close();
 		return amount;
 
 	}
@@ -163,7 +167,7 @@ public class Uebungsbeispiel5 {
 		int min = valueMin(value1, value2);
 		int max = valueMax(value1, value2);
 		int gcd = valueGcd(value1, value2);
-				
+
 		return (min * max) / gcd;
 	}
 
