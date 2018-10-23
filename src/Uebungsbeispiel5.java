@@ -15,9 +15,12 @@ public class Uebungsbeispiel5 {
 		int amount1 = 0;
 		int amount2 = 0;
 		int countFirst = 0;
+		Scanner sc = new Scanner(System.in);
 
-		amount1 = inputScanner();
-		amount2 = inputScanner();
+		amount1 = inputScanner(sc);
+		amount2 = inputScanner(sc);
+		
+		sc.close();
 
 		int min = valueMin(amount1, amount2);
 		int max = valueMax(amount1, amount2);
@@ -47,15 +50,15 @@ public class Uebungsbeispiel5 {
 			}
 			++min;
 		}
-		System.out.println("}");
+		System.out.println("}"); //# Count " + countFirst
 	}
 
 	/*
 	 * Waits for Entering a valid Input Valid Inputs > 0 || Integer
 	 */
-	public static int inputScanner() {
+	public static int inputScanner(Scanner sc) {
 		int amount = 0;
-		Scanner sc = new Scanner(System.in);
+		
 		while (true) {
 			System.out.print("Enter a positive number: ");
 			if (sc.hasNextInt()) {
@@ -65,7 +68,6 @@ public class Uebungsbeispiel5 {
 			if (amount > 0)
 				break;
 		}
-//		sc.close();
 		return amount;
 
 	}
@@ -176,6 +178,10 @@ public class Uebungsbeispiel5 {
 	 */
 	public static boolean checkPrime(int value1) {
 
+		if (value1 == 1) {
+			return false;
+		}
+		
 		for (int count = 2; count < value1; count++) {
 			if (value1 % count == 0)
 				return false;
