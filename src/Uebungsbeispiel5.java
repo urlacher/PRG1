@@ -34,7 +34,7 @@ public class Uebungsbeispiel5 {
 		System.out.printf("gcd(%d,%d) = %d\n", amount1, amount2, valueGcd(amount1, amount2));
 		System.out.printf("lcm(%d,%d) = %d\n", amount1, amount2, valueLcm(amount1, amount2));
 
-		System.out.printf("primes(%d,%d) = {", amount1, amount2);
+		System.out.printf("primes(%d,%d) = {", min, max);
 		while (min < max) {
 			if (checkPrime(min) == true) {
 				if (countFirst == 0) {
