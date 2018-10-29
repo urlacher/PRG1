@@ -5,7 +5,7 @@
 * Last Change: <2018.10.18>
 */
 
-public class Point {
+class Point {
 
 	private int pointx;
 	private int pointy;

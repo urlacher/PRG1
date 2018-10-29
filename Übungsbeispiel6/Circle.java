@@ -1,10 +1,11 @@
+
 /*
 * <2018.10.18 - Übungen>
 * 6. Übungsbeispiel
 * Author: <Thomas Urlacher>
 * Last Change: <2018.10.18>
 */
-public class Circle {
+class Circle {
 
 	private static int amount;
 	private int pointX;

@@ -8,7 +8,7 @@
 
 import java.util.Scanner;
 
-public class run {
+class Run {
 	static int rectangleAmount = 1; // TODO Durchzählen über jedes erfolgreich eigegebene Dreieck
 	static int circleAmount = 1;// TODO Durchzählen über jedes erfolgreich eigegebenes Dreieck
 

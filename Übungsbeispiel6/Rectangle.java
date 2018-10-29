@@ -6,7 +6,7 @@
 */
 
 
-public class Rectangle {
+class Rectangle {
 
 	private int valueXMin;
 	private int valueXMax;
