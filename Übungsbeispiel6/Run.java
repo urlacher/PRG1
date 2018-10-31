@@ -30,7 +30,7 @@ class Run {
 			menuNumber = menuMain(scan, menuEntries, offset);
 
 			/*
-			 * Case an Rückgabewerte des Stringarrays anpassen. Fals menü Größer werden soll
+			 * Case if returnvalue of stringarray do submenu
 			 * 
 			 */
 			switch (menuNumber) {
@@ -55,7 +55,7 @@ class Run {
 
 
 	/*
-	 * Main Menü Methode wenn 0 Zurückgegeben wird dann break while
+	 * Main draw MainMenu and return the value of the index. If Index = 0 Quit
 	 * 
 	 */
 	public static int menuMain(Scanner scan, String[][] menuEntries, int offset) {
