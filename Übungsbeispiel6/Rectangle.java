@@ -1,63 +1,84 @@
 /*
 * <2018.10.18 - Übungen>
-* 6. Übungsbeispiel
+* 6. Übungsbeispiel - Class for Rectangles
 * Author: <Thomas Urlacher>
-* Last Change: <2018.10.18>
+* Last Change: <2018.10.31>
 */
-
 
 class Rectangle {
 
-	private int valueXMin;
-	private int valueXMax;
-	private int valueYMin;
-	private int valueYMax;
+	private Point point1;
+	private Point point2;
 	private static int amount;
 	private int valueWidthRectangle;
 	private int valueHeightRectangle;
 	private int areaRectangle;
 	private boolean validRectangle;
 
+	/*
+	 * Construktor for Rectangles
+	 * 
+	 */
+
 	public Rectangle(Point xy1, Point xy2) {
 		super();
-		this.valueXMin = Point.valueMin(xy1.getPointx(), xy2.getPointx());
-		this.valueXMax = Point.valueMax(xy1.getPointx(), xy2.getPointx());
-		this.valueYMin = Point.valueMin(xy1.getPointy(), xy2.getPointy());
-		this.valueYMax = Point.valueMax(xy1.getPointy(), xy2.getPointy());
-		this.valueWidthRectangle = widthRectangle();
-		this.valueHeightRectangle = heightRectangle();
-		this.areaRectangle = valueHeightRectangle * valueWidthRectangle;
-		this.validRectangle = valueWidthRectangle == 0 || valueHeightRectangle == 0 ? false : true ;
+		this.point1 = xy1;
+		this.point2 = xy2;
+		valueWidthRectangle = 
 		
+//		System.out.println();
+
 		amount++;
 	}
 
+	/*
+	 * Returns the width of the Rectangle
+	 */
 	public int widthRectangle() {
+		
+//		this.valueWidthRectangle = point1.getPointx() - point2.getPointx();
+		System.out.println(valueWidthRectangle);
+		
+ 
+		if (point1.getPointx() < point2.getPointx()) {
+			this.valueWidthRectangle = point2.getPointx() - point1.getPointx();			
+		} else {
+			this.valueWidthRectangle = point1.getPointx() - point2.getPointx();			
+		}
 
-		valueWidthRectangle = valueXMax - valueXMin;
 		return valueWidthRectangle;
 
 	}
 
+	/*
+	 * Returns the height of the Rectangle
+	 */
 	public int heightRectangle() {
 
-		valueHeightRectangle = valueYMax - valueYMin;
+
+		this.valueHeightRectangle = point1.getPointy() < point2.getPointy() ? point2.getPointy() - point1.getPointy() : point1.getPointy() - point2.getPointy();
 		return valueHeightRectangle;
 
 	}
 
+	/*
+	 * Returns the area of the Rectangle
+	 */
 	public int areaRectangle() {
-		
+
+		areaRectangle = valueHeightRectangle * valueWidthRectangle;
 		return areaRectangle;
-		
+
 	}
-	
+
+	/*
+	 * Returns a boolean if the Rectangle is valid for drawing
+	 */
 	public boolean validRectangle() {
+		this.validRectangle = valueWidthRectangle == 0 || valueHeightRectangle == 0 ? false : true;
 		return validRectangle;
-		
+
 	}
-	
-	
 
 	/*
 	 * Printout the Rectangle on your Console use the Offset of run Method
@@ -74,7 +95,7 @@ class Rectangle {
 		 * Erste Zeile Durchlaufen und Leerschritt ausgeben
 		 */
 
-		while (countLine <= drawHeight ) {
+		while (countLine <= drawHeight) {
 
 			if (countLine == 1 || countLine == drawHeight) {
 
@@ -96,6 +117,8 @@ class Rectangle {
 		}
 
 	}
+	
+
 
 	/*
 	 * Return the amount of Rectangles

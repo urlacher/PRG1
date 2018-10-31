@@ -1,42 +1,53 @@
 
 /*
 * <2018.10.18 - Übungen>
-* 6. Übungsbeispiel
+* 6. Übungsbeispiel - Class for generating Circles
 * Author: <Thomas Urlacher>
-* Last Change: <2018.10.18>
+* Last Change: <2018.10.31>
 */
 class Circle {
 
 	private static int amount;
-	private int pointX;
-	private int pointY;
+	private Point PointXy1;
 	private int radius;
 	private double area;
 	private boolean validCircle;
+	
 
+	/*
+	 * Constructor for Circle, setting validCircle, calculating 
+	 * 
+	 */
 	public Circle(Point xy1, int radius) {
 		super();
-		this.pointX = xy1.getPointx();
-		this.pointY = xy1.getPointy();
+		this.PointXy1 = xy1;
 		this.radius = radius;
-		this.area = areaCircle();
-		this.validCircle = radius == 0 ? false : true;
 	}
-
-
 	
+	/*
+	 * getter for Radius 
+	 * 
+	 */
 	public int getRadius() {
 		return radius;
 	}
 
 
 
+	/*
+	 * setter for Radius 
+	 * 
+	 */
 	public void setRadius(int radius) {
 		this.radius = radius;
 	}
 
 
 
+	/*
+	 * returns the area of the Circle
+	 * 
+	 */
 	public double areaCircle() {
 		
 		area = Math.PI * radius * radius;
@@ -45,11 +56,21 @@ class Circle {
 
 	}
 	
+	
+	/*
+	 * returns a boolean if the circle is valid for drawing
+	 * 
+	 */
 	public boolean validCircle() {
+		this.validCircle = radius == 0 ? false : true;
 		return validCircle;
 		
 	}
 	
+	/*
+	 * draws the circle, 
+	 * 
+	 */
 	public void drawCircle(int xOffset, int yOffset) {
 
 		int drawRadiusHeight = radius;

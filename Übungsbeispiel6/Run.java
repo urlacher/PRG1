@@ -1,16 +1,16 @@
 
 /*
-* <       >
-* 6. Übungsbeispiel
+* <2018.10.18 - Übungen>
+* 6. Übungsbeispiel - Menu for Rectangle and Circles
 * Author: <Thomas Urlacher>
-* Last Change: <2018.10.18>
+* Last Change: <2018.10.31>
 */
 
 import java.util.Scanner;
 
 class Run {
-	static int rectangleAmount = 1; // TODO Durchzählen über jedes erfolgreich eigegebene Dreieck
-	static int circleAmount = 1;// TODO Durchzählen über jedes erfolgreich eigegebenes Dreieck
+
+//	static Scanner scan; 
 
 	public static void main(String[] args) {
 		java.util.Locale.setDefault(new java.util.Locale("en", "US"));
@@ -28,7 +28,6 @@ class Run {
 		while (quit) {
 
 			menuNumber = menuMain(scan, menuEntries, offset);
-//			System.out.println("MenüNummer : " + menuNumber);
 
 			/*
 			 * Case an Rückgabewerte des Stringarrays anpassen. Fals menü Größer werden soll
@@ -54,11 +53,11 @@ class Run {
 
 	}
 
+
 	/*
 	 * Main Menü Methode wenn 0 Zurückgegeben wird dann break while
 	 * 
 	 */
-
 	public static int menuMain(Scanner scan, String[][] menuEntries, int offset) {
 		int lengthLineSeperator = 80;
 		String inputValue;
@@ -96,6 +95,11 @@ class Run {
 
 	}
 
+	
+	/*
+	 * Submenu for Circles
+	 * 
+	 */
 	public static void menuNewCircle(Scanner scan, int offset) {
 
 		int valueX = 0;
@@ -104,7 +108,7 @@ class Run {
 
 		while (true) {
 
-			System.out.printf("Circle #%d:\n", circleAmount);//
+			System.out.printf("Circle #%d:\n", Circle.returnAmount()+1);//
 
 			while (true) {
 				System.out.print(" ".repeat(offset) + "Center: x coordinate: ");
@@ -150,7 +154,7 @@ class Run {
 			System.out.printf(" ".repeat(offset) + "Center: (%d,%d)\n", valueX, valueY);
 			System.out.printf(" ".repeat(offset) + "Radius: %d\n", valueRadius);
 			System.out.printf(" ".repeat(offset) + "Area:   %.2f\n", circleC.areaCircle());
-			circleAmount++;
+
 			if (circleC.validCircle() == false) {
 				break;
 			}
@@ -161,6 +165,11 @@ class Run {
 
 	}
 
+	
+	/*
+	 * Submenu for Rectangles
+	 * 
+	 */
 	public static void menuNewRectangle(Scanner scan, int offset) {
 
 		int value1X;
@@ -170,7 +179,7 @@ class Run {
 
 		while (true) {
 
-			System.out.printf("Rectangle #%d:\n", rectangleAmount);
+			System.out.printf("Rectangle #%d:\n", Rectangle.returnAmount()+1);
 
 			while (true) {
 				System.out.printf(" ".repeat(offset) + "First point:  x coordinate: ");
@@ -220,7 +229,7 @@ class Run {
 			System.out.printf(" ".repeat(offset) + "Width:  %d\n", rectangle.widthRectangle());
 			System.out.printf(" ".repeat(offset) + "Height: %d\n", rectangle.heightRectangle());
 			System.out.printf(" ".repeat(offset) + "Area:   %d\n", rectangle.areaRectangle());
-			rectangleAmount++;
+
 			if (rectangle.validRectangle() == false) {
 				break;
 			}
