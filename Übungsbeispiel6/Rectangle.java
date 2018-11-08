@@ -37,7 +37,7 @@ class Rectangle {
 	public int widthRectangle() {
 		
 //		this.valueWidthRectangle = point1.getPointx() - point2.getPointx();
-		System.out.println(valueWidthRectangle);
+
 		
  
 		if (point1.getPointx() < point2.getPointx()) {

@@ -11,6 +11,7 @@ import java.util.Scanner;
 class Run {
 
 //	static Scanner scan; 
+	static Scanner scan;
 
 	public static void main(String[] args) {
 		java.util.Locale.setDefault(new java.util.Locale("en", "US"));
@@ -19,7 +20,7 @@ class Run {
 		int menuNumber;
 		boolean quit = true;
 
-		Scanner scan = new Scanner(System.in);
+		scan = new Scanner(System.in);
 		String[][] menuEntries = new String[3][];
 		menuEntries[0] = new String[] { "quit", "\"Quit\" - quit program" };
 		menuEntries[1] = new String[] { "new circle", "\"New circle\" - create new circle" };
@@ -240,5 +241,5 @@ class Run {
 		}
 
 	}
-
+	
 }

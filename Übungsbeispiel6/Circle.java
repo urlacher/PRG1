@@ -8,7 +8,7 @@
 class Circle {
 
 	private static int amount;
-	private Point PointXy1;
+	private Point Point1;
 	private int radius;
 	private double area;
 	private boolean validCircle;
@@ -20,8 +20,9 @@ class Circle {
 	 */
 	public Circle(Point xy1, int radius) {
 		super();
-		this.PointXy1 = xy1;
+		this.Point1 = xy1;
 		this.radius = radius;
+		++amount;
 	}
 	
 	/*
@@ -77,7 +78,6 @@ class Circle {
 		int drawRadiusWidth = radius * 2;
 		
 		if (radius <= 0) {
-//			System.out.println("Keine Kreis");;
 		} else {
 			
 		
